@@ -1,13 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Content Management Tool</title>
+    <link rel="stylesheet" type="text/css" href="../style.css" media="screen" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="script.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/19c75da57a.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
-    hey
-    
+    <div class="top-section">
+        <div class="top">
+            <h1>Content Management Tool</h1>
+            <img src="cms.jpg">
+        </div>
+
+        <div class="card border border-danger">
+            <div class="input-section">
+                <b><label for="title"> Post Title:</label></b> <br />
+                <input class="input" type="text" id="title" placeholder="Enter title"> <br />
+                <b><label for="content">Description:</label></b> <br />
+                <input class="input" id="content" placeholder="Enter content" />
+            </div>
+
+            <div class="input-section">
+                <b><label class="label-section" for="image">Image:</label></b>
+                <input type="file" id="image" accept="image/*">
+            </div>
+
+            <div class="input-section">
+                <b><label class="label-section" for="video">Video:</label></b>
+                <input type="file" id="video" accept="video/*">
+            </div>
+        </div>
+    </div>
+
+    <div class="button-section">
+        <button onclick="submitForm()">Submit</button>
+    </div>
+
+    <div class="data-container">
+        <div class="data-section" id="dataSection">
+        </div>
+    </div>
 </body>
+
 </html>
